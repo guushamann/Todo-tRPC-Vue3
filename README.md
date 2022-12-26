@@ -1,9 +1,9 @@
 
-# example project with prisma express trpc vue3
+# example project with prisma express.js tRPC vue3
 
-## A working example todo project with Vue Trpc Prisma Tailwind and Typescript in an npm monorepo workspace project
+## An example todo project with Vue tRPC Prisma Tailwind and Typescript in an npm monorepo workspace project
 
-used techstack:
+used in this project:
 - npm monorepo 
 - Express.js
 - prisma
