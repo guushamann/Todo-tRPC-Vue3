@@ -17,12 +17,19 @@ used in this project:
 
 # install and run
 
-in the root of the monorep run:
+in the root of the root repo run:
+```bash
 npm install
-# initialize the db
+```
+initialize the db in the api repo
+```bash
 cd apps/api-server/
 mv .env.example .env
 npx prisma migrate dev --name init     
 cd ../../
+```
+start the dev client and server
+```bash
 npm run dev
+```
 
