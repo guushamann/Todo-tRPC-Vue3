@@ -22,7 +22,6 @@ export const useCreateTodo = () => {
             client.createTodo.query({
                 title: todo,
                 completed: false,
-                authorId: 1,
             }),
         onSuccess: () => {
             // Invalidate and refetch
