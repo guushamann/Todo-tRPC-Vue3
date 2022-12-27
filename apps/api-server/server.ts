@@ -8,24 +8,24 @@ import cors from 'cors'
 import { createTodo, getTodos, deleteTodo } from './todo'
 const t = initTRPC.create()
 
-const zodTodoPayload = z.object({
+const createTodoPayload = z.object({
     title: z.string(),
     completed: z.boolean(),
 })
-const zodgetTodosPayload = z.object({
+const getTodosPayload = z.object({
     filter: z.boolean().optional(),
 })
 const appRouter = t.router({
     // hello: t.procedure.input(z.string().nullish()).query((req) => {
     //     return `hello ${req.input}`
     // }),
-    createTodo: t.procedure.input(zodTodoPayload).query(({ input }) => {
+    createTodo: t.procedure.input(createTodoPayload).query(({ input }) => {
         createTodo(input)
     }),
     deleteTodo: t.procedure.input(z.number()).query(({ input }) => {
         deleteTodo(input)
     }),
-    getTodos: t.procedure.input(zodgetTodosPayload).query(({ input }) => {
+    getTodos: t.procedure.input(getTodosPayload).query(({ input }) => {
         return getTodos(input)
     }),
 })

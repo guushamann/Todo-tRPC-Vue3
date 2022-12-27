@@ -3,7 +3,7 @@ import { Prisma, PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 type TodoPayload = Omit<Prisma.TodoGetPayload<{}>, 'id'>
-export type Todo = Prisma.TodoGetPayload<{}>
+
 export const createTodo = async (todo: TodoPayload) => {
     await prisma.todo.create({ data: todo })
 }

@@ -1,7 +1,11 @@
 
-# example project with prisma express.js tRPC vue3
+# Example project with tRPC, Vue 3, express.js and prisma.
 
-## An example todo project with Vue tRPC Prisma Tailwind and Typescript in an npm monorepo workspace project
+## An example todo project to demonstrate the usage of tRPC with Vue 3. It can be used as a startingpoint for you're project.
+
+Tanstack query is used to retrieve the data and manage the server state. 
+Zod is used to validate the incoming data.
+
 
 used in this project:
 - npm monorepo 
@@ -9,11 +13,17 @@ used in this project:
 - prisma
 - typescript
 - trcp
+- zod
 - tailwind
 - vue3
-- vue-query
+- vue-query (tanstack)
 - prettier
 - eslint
+
+recommended vscode extensions:
+- Volar + TypeScript Vue Plugin (Volar)
+- Prisma
+- Tailwind CSS IntelliSense
 
 # install and run
 
