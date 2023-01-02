@@ -8,17 +8,17 @@ Zod is used to validate the incoming data.
 
 
 used in this project:
-- npm monorepo 
+- npm workspaces monorepo 
 - Express.js
-- prisma
-- typescript
-- trcp
-- zod
-- tailwind
-- vue3
-- vue-query (tanstack)
-- prettier
-- eslint
+- Prisma
+- Typescript
+- tRPC
+- Zod
+- Tailwind
+- Vue 3
+- Vue Query (tanstack)
+- Prettier
+- Eslint
 
 recommended vscode extensions:
 - Volar + TypeScript Vue Plugin (Volar)
