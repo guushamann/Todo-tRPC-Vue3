@@ -3,6 +3,8 @@
 
 ## An example todo project to demonstrate the usage of tRPC with Vue 3. It can be used as a startingpoint for you're project.
 
+![screenshot](/images/todo.png)
+
 Tanstack query is used to retrieve the data and manage the server state. 
 Zod is used to validate the incoming data.
 
