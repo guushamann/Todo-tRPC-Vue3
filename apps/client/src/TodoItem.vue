@@ -1,17 +1,15 @@
 <template>
     <div
-        class="flex content-start my-4 mx-40 bg-grey-200 border rounded-lg p-4 shadow-sm"
+        class="todoitem flex justify-between content-start border shadow-lg my-4 pl-4 py-4"
     >
-        <div class="text-2xl">
-            <button
-                v-if="!props.hasCompleted"
-                class="text-red-900 mr-2 px-2 rounded-lg border shadow-sm hover:shadow-lg"
-                @click="$emit('delete')"
-            >
-                ✕
-            </button>
-            {{ props.title }}
-        </div>
+        <div class="text-3xl">{{ props.title }}</div>
+        <button
+            v-if="!props.hasCompleted"
+            class="mr-2 px-2 cross text-3xl"
+            @click="$emit('delete')"
+        >
+            ✕
+        </button>
     </div>
 </template>
 <script setup lang="ts">

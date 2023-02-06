@@ -1,19 +1,19 @@
 <template>
     <div class="flex flex-col text-gray-500">
-        <div class="flex justify-center"><div class="text-6xl">Todos</div></div>
+        <div class="flex justify-center">
+            <div class="text-6xl title">Todos</div>
+        </div>
         <div class="flex justify-center mt-4">
             <input
                 @keyup.enter="addTodo()"
                 type="text"
                 v-model="todo"
                 placeholder="What do you want to do?"
-                class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full leading-5 appearance-none placeholder-gray-500 text-gray-900 placeholder-opacity-25"
+                class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 block w-full leading-5 appearance-none placeholder-gray-500 text-gray-900 placeholder-opacity-25"
             />
         </div>
-        <div
-            class="tabs-container flex flex-col justify-center mt-4 border-gray-300 border rounded-lg p-4"
-        >
-            <div class="tabs mx-40 gap-4 flex content-start">
+        <div class="tabs-container flex flex-col justify-center mt-4 text-xl">
+            <div class="tabs gap-4 flex content-start">
                 <div
                     class="tab"
                     :class="{ active: filter === false }"
