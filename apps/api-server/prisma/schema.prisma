@@ -11,7 +11,28 @@ datasource db {
 }
 
 model Todo {
-  id        Int     @id @default(autoincrement())
-  title     String
-  completed Boolean @default(false)
+  id         Int            @id @default(autoincrement())
+  title      String
+  note       String?
+  completed  Boolean        @default(false)
+  archived   Boolean        @default(false)
+  pinned     Boolean        @default(false)
+  Categories TodoCategory[]
+}
+
+model TodoCategory {
+  id         Int       @id @default(autoincrement())
+  Todo       Todo?     @relation(fields: [todoId], references: [id])
+  todoId     Int?
+  Category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId Int?
+}
+
+model Category {
+  id          Int            @id @default(autoincrement())
+  Name        String
+  Todos       TodoCategory[]
+  visible     Boolean        @default(true)
+  visibleSolo Boolean        @default(false)
+  color       String         @default("#717E8E")
 }
