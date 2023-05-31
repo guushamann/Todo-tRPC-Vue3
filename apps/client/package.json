@@ -6,10 +6,10 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@tanstack/vue-query": "^4.29.11",
     "@trpc/client": "^10.6.0",
     "abort-controller": "^3.0.0",
-    "vue": "^3.2.45",
-    "vue-query": "^1.26.0"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",

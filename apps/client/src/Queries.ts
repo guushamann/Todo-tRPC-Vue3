@@ -1,8 +1,9 @@
-import { useQueryClient, useQuery, useMutation } from 'vue-query'
+import { useQueryClient, useQuery, useMutation } from '@tanstack/vue-query'
 import { createTRPCProxyClient } from '@trpc/client'
 import { httpBatchLink } from '@trpc/client/links/httpBatchLink'
 import type { AppRouter } from 'api-server/server'
 import type { Ref } from 'vue'
+import { Prisma } from '@prisma/client'
 const url = import.meta.env.VITE_TRPC_URL
 
 const client = createTRPCProxyClient<AppRouter>({
@@ -18,11 +19,8 @@ export const useTodos = (filter: Ref<boolean | undefined>) => {
 export const useCreateTodo = () => {
     const queryClient = useQueryClient()
     return useMutation({
-        mutationFn: (todo: string) =>
-            client.createTodo.query({
-                title: todo,
-                completed: false,
-            }),
+        mutationFn: (input: Prisma.TodoCreateInput) =>
+            client.createTodo.query(input),
         onSuccess: () => {
             // Invalidate and refetch
             queryClient.invalidateQueries({ queryKey: ['todos'] })

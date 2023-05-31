@@ -6,19 +6,16 @@ import express from 'express'
 
 import cors from 'cors'
 import { createTodo, getTodos, deleteTodo } from './todo'
+import { Prisma } from '@prisma/client'
 const t = initTRPC.create()
 
-const createTodoPayload = z.object({
+const createTodoPayload: z.ZodType<Prisma.TodoCreateInput> = z.object({
     title: z.string(),
-    completed: z.boolean(),
 })
 const getTodosPayload = z.object({
     filter: z.boolean().optional(),
 })
 const appRouter = t.router({
-    // hello: t.procedure.input(z.string().nullish()).query((req) => {
-    //     return `hello ${req.input}`
-    // }),
     createTodo: t.procedure.input(createTodoPayload).query(({ input }) => {
         createTodo(input)
     }),

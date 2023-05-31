@@ -14,9 +14,9 @@ model Todo {
   id         Int            @id @default(autoincrement())
   title      String
   note       String?
-  completed  Boolean        @default(false)
-  archived   Boolean        @default(false)
-  pinned     Boolean        @default(false)
+  completed  Boolean?       @default(false)
+  archived   Boolean?       @default(false)
+  pinned     Boolean?       @default(false)
   Categories TodoCategory[]
 }
 

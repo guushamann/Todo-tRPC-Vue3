@@ -1,6 +1,6 @@
 <template>
     <div
-        class="todoitem flex justify-between content-start border shadow-lg my-4 pl-4 py-4"
+        class="todoitem flex justify-between content-start border shadow my-4 pl-4 py-4"
     >
         <div class="text-3xl">{{ props.title }}</div>
         <button
@@ -15,3 +15,8 @@
 <script setup lang="ts">
 const props = defineProps(['title', 'hasCompleted'])
 </script>
+<style>
+.shadow {
+    box-shadow: 2px 2px 5px 1px var(--colorMain);
+}
+</style>

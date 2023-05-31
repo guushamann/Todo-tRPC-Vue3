@@ -1,5 +1,11 @@
 @import './base.css';
 
+:root {
+  --colorMain: #444;
+  --colorLight: #999;
+  --colorAccent: #ddd;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -9,7 +15,7 @@
 }
 
 body {
-  background-color: #ffac80;
+  background-color: var(--colorLight);
   font-family: 'Work Sans', sans-serif;
 
 }
@@ -19,45 +25,45 @@ body {
 }
 
 .title {
-  color: #ff563a;
+  color: var(--colorMain);
   font-family: 'Bebas Neue', cursive;
 }
 
 input[type="text"],
 textarea {
   padding: 1rem;
-  background-color: #fed3c4;
+  background-color: var(--colorAccent);
 
 }
 
 input[type="text"]::placeholder {
   font-style: italic;
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
+  color: var(--colorMain);
   opacity: 1;
   /* Firefox */
 }
 
 .tab {
-  color: #ff563a;
+  color: var(--colorMain);
 }
 
 .tabs-container,
 input[type="text"] {
-  border-color: #ff5740
+  border-color: var(--colorMain)
 }
 
 .todoitem {
   font-family: 'Bebas Neue', cursive;
-  background-color: #fed3c4;
-  color: #ff563a;
-  border-color: #ff5740;
+  background-color: var(--colorAccent);
+  color: var(--colorMain);
+  border-color: var(--colorMain);
 
 }
 
 .todoitem .cross {
 
-  color: #ff563a;
-  border-color: #ff5740;
+  color: var(--colorMain);
+  border-color: var(--colorMain);
 
 }
