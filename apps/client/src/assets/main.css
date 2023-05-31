@@ -36,7 +36,8 @@ textarea {
 
 }
 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+textarea::placeholder {
   font-style: italic;
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--colorMain);
@@ -48,8 +49,19 @@ input[type="text"]::placeholder {
   color: var(--colorMain);
 }
 
+.tag {
+  background-color: var(--colorMain);
+  color: var(--colorLight)
+}
+
+.tag.selected {
+  background-color: var(--colorAccent);
+  color: var(--colorMain);
+}
+
 .tabs-container,
-input[type="text"] {
+input[type="text"],
+textarea {
   border-color: var(--colorMain)
 }
 
