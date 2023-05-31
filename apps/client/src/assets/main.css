@@ -1,10 +1,6 @@
 @import './base.css';
 
-:root {
-  --colorMain: #444;
-  --colorLight: #999;
-  --colorAccent: #ddd;
-}
+
 
 #app {
   max-width: 1280px;
@@ -14,8 +10,12 @@
   font-weight: normal;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
-  background-color: var(--colorLight);
+
   font-family: 'Work Sans', sans-serif;
 
 }
@@ -25,14 +25,12 @@ body {
 }
 
 .title {
-  color: var(--colorMain);
   font-family: 'Bebas Neue', cursive;
 }
 
 input[type="text"],
 textarea {
   padding: 1rem;
-  background-color: var(--colorAccent);
 
 }
 
@@ -40,42 +38,20 @@ input[type="text"]::placeholder,
 textarea::placeholder {
   font-style: italic;
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--colorMain);
   opacity: 1;
   /* Firefox */
 }
 
-.tab {
-  color: var(--colorMain);
-}
 
-.tag {
-  background-color: var(--colorMain);
-  color: var(--colorLight)
-}
 
-.tag.selected {
-  background-color: var(--colorAccent);
-  color: var(--colorMain);
-}
 
-.tabs-container,
-input[type="text"],
-textarea {
-  border-color: var(--colorMain)
-}
+
+
+
+
 
 .todoitem {
   font-family: 'Bebas Neue', cursive;
-  background-color: var(--colorAccent);
-  color: var(--colorMain);
-  border-color: var(--colorMain);
 
-}
-
-.todoitem .cross {
-
-  color: var(--colorMain);
-  border-color: var(--colorMain);
 
 }

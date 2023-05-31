@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    :root {
+        --shade-50: #f7f6f9;
+        --shade-100: #efedf1;
+        --shade-200: #dbd7e0;
+        --shade-300: #bbb3c6;
+        --shade-400: #958aa6;
+        --shade-500: #786c8b;
+        --shade-600: #6b5e7d;
+        --shade-700: #51475d;
+        --shade-800: #443d4f;
+        --shade-900: #3c3644;
+        --shade-950: #29242d;
+    }
+
+
+    body:has(#todoApp[data-theme='wedgewood']) {
+        --shade-50: #f2f9f9;
+        --shade-100: #ddeff0;
+        --shade-200: #bfe0e2;
+        --shade-300: #92cace;
+        --shade-400: #5faab1;
+        --shade-500: #438e96;
+        --shade-600: #3b757f;
+        --shade-700: #356169;
+        --shade-800: #325158;
+        --shade-900: #2d464c;
+        --shade-950: #1a2c32;
+    }
+
+    body:has(#todoApp[data-theme='apple-blossom']) {
+        --shade-50: #fcf5f4;
+        --shade-100: #f9ebea;
+        --shade-200: #f2dbd9;
+        --shade-300: #e8bdb9;
+        --shade-400: #da9892;
+        --shade-500: #c96e6a;
+        --shade-600: #a44646;
+        --shade-700: #953b3d;
+        --shade-800: #7d3438;
+        --shade-900: #6c2f35;
+        --shade-950: #3b1618;
+    }
+
+    body:has(#todoApp[data-theme='cold-purple']) {
+        --shade-50: #f7f6fc;
+        --shade-100: #efeef9;
+        --shade-200: #e2e0f4;
+        --shade-300: #ccc7eb;
+        --shade-400: #a396d9;
+        --shade-500: #9582d0;
+        --shade-600: #8266c1;
+        --shade-700: #7253ae;
+        --shade-800: #5f4592;
+        --shade-900: #4e3a78;
+        --shade-950: #312550;
+    }
+}

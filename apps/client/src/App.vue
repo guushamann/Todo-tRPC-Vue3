@@ -1,9 +1,13 @@
 <template>
-    <div class="container flex flex-col text-gray-500">
+    <div
+        id="todoApp"
+        :data-theme="themeColor"
+        class="container flex flex-col text-shade-500"
+    >
         <div class="flex align-right"></div>
         <div class="flex justify-center mb-4">
-            <div class="text-6xl title grow">Todos</div>
-            <ThemePicker class="text-6xl title"></ThemePicker>
+            <div class="text-6xl title grow text-shade-500">Todos</div>
+            <ThemePicker class="text-6xl" v-model="themeColor"></ThemePicker>
         </div>
         <div>
             <div>
@@ -14,13 +18,29 @@
                     type="text"
                     v-model="todo"
                     placeholder="What do you want to do?"
-                    class="bg-white focus:outline-none focus:shadow-outline border py-2 px-4 block w-full leading-5 appearance-none placeholder-gray-500 text-gray-900 placeholder-opacity-25"
+                    class="placeholder:text-shade-300 border-shade-500 bg-shade-100 focus:outline-none focus:shadow-outline border py-2 px-4 block w-full leading-5 appearance-none placeholder-gray-500 text-gray-900 placeholder-opacity-25"
                 />
                 <div class="formelement mt-4 gap-4 flex">
-                    <button class="rounded-full px-4 tag">Private</button>
-                    <button class="rounded-full px-4 tag">Sport</button>
-                    <button class="rounded-full px-4 tag">Work</button>
-                    <button class="rounded-full px-4 tag">Grocery</button>
+                    <button
+                        class="bg-shade-500 text-shade-100 rounded-full px-4 tag"
+                    >
+                        Private
+                    </button>
+                    <button
+                        class="bg-shade-500 text-shade-100 rounded-full px-4 tag"
+                    >
+                        Sport
+                    </button>
+                    <button
+                        class="bg-shade-500 text-shade-100 rounded-full px-4 tag"
+                    >
+                        Work
+                    </button>
+                    <button
+                        class="bg-shade-500 text-shade-100 rounded-full px-4 tag"
+                    >
+                        Grocery
+                    </button>
                 </div>
 
                 <div class="formelement justify-center mt-4">
@@ -28,7 +48,7 @@
                         placeholder="Enter additional info here..."
                         rows="5"
                         cols="33"
-                        class="focus:outline-none focus:shadow-outline border py-2 px-4 block w-full leading-5 appearance-none text-gray-900 placeholder-opacity-25"
+                        class="placeholder:text-shade-300 border-shade-500 bg-shade-100 focus:outline-none focus:shadow-outline border py-2 px-4 block w-full leading-5 appearance-none text-gray-900 placeholder-opacity-25"
                     ></textarea>
                 </div>
             </div>
@@ -37,7 +57,7 @@
         <div class="tabs-container flex flex-col justify-center mt-4 text-xl">
             <div class="tabs gap-4 flex content-start">
                 <div
-                    class="tab"
+                    class="tab text-shade-500"
                     :class="{ active: filter === false }"
                     @click="filter = false"
                     data-tab="tab-2"
@@ -85,6 +105,7 @@ const createTodo = useCreateTodo()
 const deleteTodo = useDeleteTodo()
 
 const todo = ref('')
+const themeColor = ref('wedgewood')
 const filter = ref<boolean | undefined>(false)
 const { data: todos } = useTodos(filter)
 const addTodo = () => {
